@@ -1,0 +1,8 @@
+<form #company_submit="ngForm" (ngSubmit)="onSubmit(company_submit)">
+  <div *ngFor="let c of mod_company">
+    {{ c.type }}:
+    <input [type]="c.type" [name]="c.name" [title]="c.title" ngModel required />
+  </div>
+
+  <button type="submit">Submit</button>
+</form>
